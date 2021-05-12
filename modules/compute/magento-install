@@ -1,0 +1,20 @@
+composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.1 .
+
+bin/magento setup:install \
+--base-url=http://magento.domain \
+--db-host=rds-endpoint \
+--db-name=magentodb \
+--db-user=magento \
+--db-password="dbpass" \
+--admin-firstname=bob \
+--admin-lastname=user \
+--admin-email=bob@admin.com \
+--admin-user=admin \
+--admin-password=admin@example \
+--language=en_US \
+--currency=MXN \
+--timezone=America/Mexico_City \
+--use-rewrites=1 \
+--search-engine=elasticsearch7 \
+--elasticsearch-host=https://elk-endpoint \
+--elasticsearch-port=443

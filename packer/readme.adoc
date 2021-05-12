@@ -1,0 +1,9 @@
+# Build Magento AWS AMI with Packer
+
+. Install Packer
+
+  brew install packer
+
+. Execute
+
+  packer build -var-file="json-credential.json" base.json
